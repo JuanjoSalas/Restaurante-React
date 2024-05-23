@@ -20,6 +20,9 @@ export const Reserve = () => {
     } else if (data.name.length < 3) {
       setMessage("Name must be at least 3 characters");
       setBtnDisabled(true);
+    } else if (data.numberPerson < 1) {
+      setMessage("Number must be at least 1 person");
+      setBtnDisabled(true);
     } else {
       setMessage("");
       setBtnDisabled(false);
