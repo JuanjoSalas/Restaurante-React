@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Reserve.css";
 import { useNavigate } from "react-router-dom";
 
 export const Reserve = () => {
@@ -50,7 +51,7 @@ export const Reserve = () => {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <input
+      <input className="input"
         type="text"
         name="name"
         id="name"
@@ -58,7 +59,7 @@ export const Reserve = () => {
         onChange={handleInputChange}
         value={data.name}
       />
-      <input
+      <input className="input"
         type="datetime-local"
         name="date"
         id="date"
@@ -66,7 +67,7 @@ export const Reserve = () => {
         onChange={handleInputChange}
         value={data.date}
       />
-      <input
+      <input className="input"
         type="number"
         name="numberPerson"
         id="numberPerson"
@@ -74,7 +75,7 @@ export const Reserve = () => {
         onChange={handleInputChange}
         value={data.numberPerson}
       />
-      <input type="submit" value="Send" disabled={btnDisabled} />
+      <input className="button" type="submit" value="Send" disabled={btnDisabled} />
       <p>{message}</p>
     </form>
   );
